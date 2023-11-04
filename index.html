@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/edit/matchbrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/addon/edit/closebrackets.min.js"></script>
+
+  <!-- Link para o Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-------------------------------------------->
+  <title>CodeCraft - Code Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CodeCraft</h1>
+      <h2>Editor de Código JavaScript Online</h2>
+      <div class="modos">
+        <button id="toggle-modo" onclick="alternarModo()" class="alternarModo">
+          <i id="modo-icone" class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="editor-container">
+      <textarea id="code" class="code-editor">// Escreva seu código JavaScript aqui</textarea>
+    </div>
+    
+    <button onclick="runCode()" class="run-button">
+      <i class="fas fa-play"></i><p>Executar</p>
+    </button>
+    
+    <div class="output-container">
+      <textarea id="output" class="code-editor" readonly placeholder="(Execute o programa para exibir sua saída)"></textarea>
+    </div>
+  </div>
+
+  <!-- ------------------- FOOTER ------------------ -->
+  <footer>
+    &copy; 2023 | Brenno Ruan Dev
+  </footer>
+
+  <!-- ---------------- SCRIPT --------------------- -->
+  <script src="script.js"></script>
+</body>
+</html>

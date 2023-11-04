@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.run-button {
+    background-color: #11af97;
+    font-size: 20px;
+    border: none;
+    width: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.run-button i {
+    padding: 5px;
+}
+
+.run-button:hover {
+    background-color: #10A38D;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.code-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-editor {
+    height: 300px;
+    width: 97%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 10px;
+    margin: 0 10px 20px 0;
+    background-color: #fff;
+    resize: none;
+    flex: 1;
+}
+
+/* Dark and Light Mode */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+body.modo-escuro {
+    background-color: #333; 
+    color: #fff; 
+}
+
+.modo-escuro #output {
+    background: #333;
+    color: #fff;
+}
+
+.modo-escuro #modo-icone.fa-sun {
+    color: #fff; 
+}
+.modo-escuro .alternarModo {
+    background-color: #636363;
+}
+
+/* Toggle Mode Button */
+.alternarModo {
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: none;
+}
+
+/* ---------------- FOOTER ----------------------- */
+footer {
+    background-color: #3c3c3c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .header h2 {
+        display: none;
+    }
+    .header h1 {
+        font-size: 16px;
+    }
+    .editor-container {
+        margin-top: 60px;
+    }
+    .run-button {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 1;
+        background-color: #11af97;
+        color: white;
+        font-size: 20px;
+        padding: auto 5px;
+        border: none;
+        height: 40px;
+        width: 40px;
+        border-radius: 5px;
+    }
+    .run-button p {
+        display: none;
+    }
+    
+    .code-editor {
+        margin-bottom: 70px;
+        width: calc(100% - 20px);
+    }
+    .alternarModo {
+        margin-top: 10px;
+    }
+    .code-editor {
+        margin-top: 10px;
+    }
+}
